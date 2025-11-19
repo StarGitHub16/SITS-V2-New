@@ -99,7 +99,7 @@
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Penetration Testing</a>
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">IT Support</a>
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Co-Managed IT</a>
-        <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Backup & Recovery</a>
+        <a href="./Services/bdr.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Backup & Recovery</a>
 
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Business Communications (VoIP)</a>
         <a href="#cloud-services" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Conference Room as a Service</a>
@@ -229,7 +229,7 @@
          x-transition:leave="transition ease-in-out duration-300 transform"
          x-transition:leave-start="translate-x-0"
          x-transition:leave-end="translate-x-full"
-         class="fixed top-0 right-0 w-full h-full bg-background-light dark:bg-background-dark shadow-xl z-50 xl:hidden overflow-y-auto">
+         class="fixed top-0 right-0 w-full h-full bg-[linear-gradient(180deg,var(--tw-gradient-stops))] from-neutral-100 to-neutral-400 dark:bg-background-dark shadow-xl z-50 xl:hidden overflow-y-auto">
         
         <div class="p-4 border-b border-slate-200 dark:border-slate-700 flex justify-end">
             <button @click="isMenuOpen = false" class="text-slate-800 dark:text-slate-200">
@@ -467,29 +467,29 @@
 
 </div>
 <div x-show="activeService === 'cloud-services'">
-<h3 class="text-2xl font-bold font-display text-accent dark:text-white">Strategic Cloud Solutions</h3>
-<p class="mt-4 text-slate-600 dark:text-slate-400">Unlock the full potential of cloud computing with our tailored solutions. We help businesses migrate to, manage, and optimize cloud environments like Azure and AWS. Improve scalability, enhance data accessibility, and foster collaboration with a secure and cost-effective cloud infrastructure.</p>
-<ul class="mt-4 space-y-2 text-slate-600 dark:text-slate-400">
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent">check_circle</span> Cloud Migration &amp; Management</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent">check_circle</span> Microsoft 365 / Google Workspace</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent">check_circle</span> Infrastructure as a Service (IaaS)</li>
-</ul>
-<a class=" sm:w-1/6 bg-accent text-white font-medium py-2 px-4 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 m-3" href="#services">
+  <h3 class="text-2xl font-bold font-display text-accent dark:text-white">Strategic Cloud Solutions</h3>
+  <p class="mt-4 text-slate-600 dark:text-slate-400">Unlock the full potential of cloud computing with our tailored solutions. We help businesses migrate to, manage, and optimize cloud environments like Azure and AWS. Improve scalability, enhance data accessibility, and foster collaboration with a secure and cost-effective cloud infrastructure.</p>
+  <ul class="mt-4 space-y-2 text-slate-600 dark:text-slate-400">
+    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent">check_circle</span> Cloud Migration &amp; Management</li>
+    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent">check_circle</span> Microsoft 365 / Google Workspace</li>
+    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent">check_circle</span> Infrastructure as a Service (IaaS)</li>
+  </ul>
+  <a class=" sm:w-1/6 bg-accent text-white font-medium py-2 px-4 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 m-3" href="#services">
               Learn More          
-</a>
+  </a>
 
 </div>
 <div x-show="activeService === 'it-consulting'">
-<h3 class="text-2xl font-bold font-display text-accent dark:text-white">IT Consulting &amp; Strategy</h3>
-<p class="mt-4 text-slate-600 dark:text-slate-400">As your virtual CIO (vCIO), we provide high-level strategic guidance to ensure your technology investments drive business success. We'll help you create a technology roadmap, manage IT budgets, and implement solutions that give you a competitive edge in your industry.</p>
-<ul class="mt-4 space-y-2 text-slate-600 dark:text-slate-400">
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent">check_circle</span> Technology Roadmapping</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent">check_circle</span> Budgeting &amp; Vendor Management</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent">check_circle</span> Compliance &amp; Risk Assessment</li>
-</ul>
-<a class=" sm:w-1/6 bg-accent text-white font-medium py-2 px-4 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 m-3" href="#services">
-              Learn More          
-</a>
+  <h3 class="text-2xl font-bold font-display text-accent dark:text-white">IT Consulting &amp; Strategy</h3>
+  <p class="mt-4 text-slate-600 dark:text-slate-400">As your virtual CIO (vCIO), we provide high-level strategic guidance to ensure your technology investments drive business success. We'll help you create a technology roadmap, manage IT budgets, and implement solutions that give you a competitive edge in your industry.</p>
+  <ul class="mt-4 space-y-2 text-slate-600 dark:text-slate-400">
+    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent">check_circle</span> Technology Roadmapping</li>
+    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent">check_circle</span> Budgeting &amp; Vendor Management</li>
+    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent">check_circle</span> Compliance &amp; Risk Assessment</li>
+  </ul>
+  <a class=" sm:w-1/6 bg-accent text-white font-medium py-2 px-4 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 m-3" href="#services">
+    Learn More          
+  </a>
 
 </div>
         </div>
