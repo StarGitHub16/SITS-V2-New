@@ -85,7 +85,8 @@ details[open] > summary .material-symbols-outlined {
   <div class="relative min-h-screen" x-data="{ isMenuOpen: false }">
    
     <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
-      <div class="container mx-auto px-4 py-8 flex justify-between items-center">
+      <div class="container mx-auto px-4 py-4 md:py-8 flex justify-between items-center">
+
         <a class="flex items-center space-x-3" href="../index.html">
           <img alt="Summit IT Solutions Logo" class="w-200 h-28" src="../asset/SITS logo.png"/>
         </a>
@@ -262,7 +263,7 @@ details[open] > summary .material-symbols-outlined {
         
         <div x-show="open" 
              x-collapse 
-             class="flex flex-col space-y-3 pl-4 pt-2">
+             class="flex flex-col space-y-3 bg-white rounded-lg">
             <a href="#managed-cybersecurity" class="text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 text-center hover:text-accent dark:hover:text-accent py-1 font-display">Managed Cybersecurity</a>
             <a href="#it-support" class="text-sm text-gray-700 dark:text-gray-200 hover:text-accent hover:bg-gray-100 text-center dark:hover:text-accent py-1 font-display">Penetration Testing</a>
             <a href="#it-support" class="text-sm text-gray-700 dark:text-gray-200 hover:text-accent hover:bg-gray-100 text-center dark:hover:text-accent py-1 font-display">IT Support</a>
@@ -284,7 +285,7 @@ details[open] > summary .material-symbols-outlined {
             </span>
         </button>
         
-        <div x-show="open" x-collapse class="flex flex-col space-y-3 pl-4 pt-2">
+          <div x-show="open" x-collapse class="flex flex-col space-y-3 bg-white rounded-lg">
             <a href="#about-us" class="text-sm text-gray-700 dark:text-gray-200 hover:text-accent hover:bg-gray-100 text-center dark:hover:text-accent py-1 font-display">Business Phones</a>
             <a href="#team" class="text-sm text-gray-700 dark:text-gray-200 hover:text-accent hover:bg-gray-100 text-center dark:hover:text-accent py-1 font-display">Networking Equipment</a>
             <a href="#careers" class="text-sm text-gray-700 dark:text-gray-200 hover:text-accent hover:bg-gray-100 text-center dark:hover:text-accent py-1 font-display">Cameras</a>
@@ -303,7 +304,7 @@ details[open] > summary .material-symbols-outlined {
             </span>
         </button>
         
-        <div x-show="open" x-collapse class="flex flex-col space-y-3 pl-4 pt-2">
+          <div x-show="open" x-collapse class="flex flex-col space-y-3 bg-white rounded-lg">
             <a href="#managed-cybersecurity" class="text-sm text-gray-700 dark:text-gray-200 hover:text-accent hover:bg-gray-100 text-center dark:hover:text-accent py-1 font-display">Law Firms</a>
             <a href="#it-support" class="text-sm text-gray-700 dark:text-gray-200 hover:text-accent hover:bg-gray-100 text-center dark:hover:text-accent py-1 font-display">Accounting</a>
             <a href="#it-support" class="text-sm text-gray-700 dark:text-gray-200 hover:text-accent hover:bg-gray-100 text-center dark:hover:text-accent py-1 font-display">Financial Services</a>
@@ -326,7 +327,7 @@ details[open] > summary .material-symbols-outlined {
             </span>
         </button>
         
-        <div x-show="open" x-collapse class="flex flex-col space-y-3 pl-4 pt-2">
+            <div x-show="open" x-collapse class="flex flex-col space-y-3 bg-white rounded-lg">
             <a href="#about-us" class="text-sm text-gray-700 dark:text-gray-200 hover:text-accent hover:bg-gray-100 text-center  dark:hover:text-accent py-1 font-display">Why Summit?</a>
             <a href="#careers" class="text-sm text-gray-700 dark:text-gray-200 hover:text-accent hover:bg-gray-100 text-center  dark:hover:text-accent py-1 font-display">Careers</a>
         </div>
@@ -341,7 +342,7 @@ details[open] > summary .material-symbols-outlined {
             </span>
         </button>
         
-        <div x-show="open" x-collapse class="flex flex-col space-y-3 pl-4 pt-2">
+          <div x-show="open" x-collapse class="flex flex-col space-y-3 bg-white rounded-lg">
             <a href="#latest-posts" class="text-sm text-gray-700 dark:text-gray-200 hover:text-accent hover:bg-gray-100 text-center  dark:hover:text-accent py-1 font-display">Blog Center</a>
         </div>
     </div>
@@ -367,10 +368,10 @@ details[open] > summary .material-symbols-outlined {
                         Hardware fails. Disasters strike. Human error happens. When your critical data vanishes in an instant, how quickly can you recover? We ensure "if" becomes "when", and "when" becomes "in minutes".
           </p>
           <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <a class="inline-block bg-primary text-white font-medium py-3 px-8 rounded-lg hover:opacity-90 transition-opacity text-center" href="#contact">
+            <a class="inline-block bg-primary text-white font-medium py-3 px-8 rounded-lg hover:opacity-90 transition-opacity text-center font-display" href="#contact">
                             Protect My Data Now
             </a>
-            <a class="inline-block bg-accent/10 text-accent dark:bg-white/10 dark:text-white font-medium py-3 px-8 rounded-lg hover:bg-accent/20 dark:hover:bg-white/20 transition-colors text-center" href="#features">
+            <a class="inline-block bg-accent/10 text-accent dark:bg-white/10 dark:text-white font-medium py-3 px-8 rounded-lg hover:bg-accent/20 dark:hover:bg-white/20 transition-colors text-center font-display" href="#features">
                             See Our Solution
             </a>
           </div>
@@ -400,7 +401,7 @@ details[open] > summary .material-symbols-outlined {
             <div class="check-list-item"><strong>Layered Redundancy:</strong> On-site and cloud backups for ultimate resilience.</div>
           </div>
           <div class="mt-10">
-            <a class="inline-flex items-center gap-2 bg-primary text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-opacity" href="#contact">
+            <a class="inline-flex items-center gap-2 bg-primary text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-opacity font-display" href="#contact">
               <span>Review My Recovery Plan</span>
               <span class="material-symbols-outlined">arrow_forward</span>
             </a>
@@ -484,7 +485,7 @@ details[open] > summary .material-symbols-outlined {
             <span>Clear, documented recovery plan and procedures.</span>
           </li>
         </ul>
-        <a class="mt-6 inline-block w-full text-center bg-primary text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-opacity" href="#">Define My Recovery Strategy</a>
+        <a class="mt-6 inline-block w-full text-center bg-primary text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-opacity font-display" href="#">Define My Recovery Strategy</a>
         </div>
       </div>
     </div>
@@ -532,7 +533,7 @@ details[open] > summary .material-symbols-outlined {
             Don't wait for a disaster to test your backup plan. Let's have a conversation about your current strategy and discover how Summit IT can provide true business resilience and peace of mind.
         </p>
         <div class="mt-8">
-          <a class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-opacity text-lg" href="#">
+          <a class="bg-accent text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition-opacity text-lg font-display" href="#">
            Free BDR Assessment
           </a>
         </div>
