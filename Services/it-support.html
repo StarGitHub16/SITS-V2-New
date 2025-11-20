@@ -6,6 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Orbitron:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link rel="stylesheet" href="../css/services.css">
 <script>
     tailwind.config = {
       darkMode: "class",
@@ -32,83 +33,6 @@
       },
     };
   </script>
-<style type="text/tailwindcss">.material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
-    }
-.hero-bg-light {
-    background-color: #f8fafc;
-    background-image: radial-gradient(circle at 1% 1%, rgba(191, 32, 38, 0.05), transparent 30%), radial-gradient(circle at 99% 99%, rgba(46, 74, 111, 0.05), transparent 30%);
-}
-.dark .hero-bg-light {
-    background-color: #18181B;
-    background-image: radial-gradient(circle at 100% 0%, rgba(191, 32, 38, 0.3), transparent 40%), radial-gradient(circle at 0% 100%, rgba(46, 74, 111, 0.6), transparent 40%);
-}
-details > summary {
-    list-style: none
-    }
-details > summary::-webkit-details-marker {
-    display: none
-    }
-details > summary .material-symbols-outlined {
-    transition: transform 0.2s ease-in-out
-    }
-details[open] > summary .material-symbols-outlined {
-    transform: rotate(180deg)
-    }
-.check-list-item {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA5_iFUXcR6prvBEECZd-c-FH4F6Ssm5dPdG5VC5mdfN74bhfVE3xtbo3PiActaEYnuvdEe3t1NzdlT3X2hGJAC4aXCMCvZByFKzwj7PznFoyFCqpALT4oxVzJ8DNhcNYLbcYEuKg9k9Rou2LCMePyY_XEcBfeqM4ejzirTMUccNjYpmjjdQxA93AgkblQvGBLsg0WJlvcymIP3zMTr6VveUmjYdmKedl522NzuhT7iu3l1Hs5ekVbKk3CKgntlmjUr9LQgEB5Jy5CT);
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 1.25rem;
-    padding-left: 2rem
-    }
-.step-line {
-    content: '';
-    position: absolute;
-    left: 1.25rem;
-    top: 3.5rem;
-    bottom: -1rem;
-    width: 2px;
-    background-color: #e2e8f0;
-}
-.dark .step-line {
-    background-color: #475569;
-}
-
-
-.step:last-child .step-line {
-    display: none;
-}
-
-/*Scroll Functionality CSS*/
-
-    /*For Scroll Transition from Left*/
-    .scroll-item {
-        opacity: 0;
-        transform: translateX(-30px);
-        transition: all .8s ease-in-out;
-    }
-    
-    .scroll-item.visible {
-        opacity: 1;
-        transform:translateX(0);
-    }
-
-    /*For Scroll Transition from Right*/
-    .scroll-item-right {
-        opacity: 0;
-        transform: translateX(60px);
-        transition: all .8s ease-in-out;
-    }
-
-    .scroll-item-right.visible {
-        opacity: 1; 
-        transform: translateX(0px);
-        transition: all .8s ease-in-out;
-    }
-
-</style>
-
 
 <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
@@ -137,7 +61,7 @@ details[open] > summary .material-symbols-outlined {
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="./managed-cybersecurity.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Managed Cybersecurity</a>
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Penetration Testing</a>
@@ -165,7 +89,7 @@ details[open] > summary .material-symbols-outlined {
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="#about-us" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Business Phones</a>
         <a href="#team" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Networking Equipment</a>
@@ -189,7 +113,7 @@ details[open] > summary .material-symbols-outlined {
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="#managed-cybersecurity" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 font-display">Law Firms</a>
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent dark:hover:bg-slate-700 font-display">Accounting</a>
@@ -218,7 +142,7 @@ details[open] > summary .material-symbols-outlined {
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="#about-us" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Why Summit?</a>
         <a href="#careers" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Careers</a>
@@ -237,7 +161,7 @@ details[open] > summary .material-symbols-outlined {
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="#latest-posts" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Blog Center</a>
       </div>
@@ -388,7 +312,7 @@ details[open] > summary .material-symbols-outlined {
             We've moved beyond simple problem-solving. The Summit Way is a partnership model where our success is directly tied to yours. We don't just fix tech; we optimize it to drive your business forward.
           </p>
           <div class="mt-8 space-y-6">
-            <div class="flex items-start">
+            <div class="flex items-start scroll-item">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-6">
                 <span class="material-symbols-outlined text-primary text-3xl">groups</span>
               </div>
@@ -397,7 +321,7 @@ details[open] > summary .material-symbols-outlined {
                 <p class="mt-1 text-slate-600 dark:text-slate-400">You get a dedicated team—your "pod"—that knows your business, your environment, and your people. No more re-explaining issues to a new technician every time.</p>
               </div>
             </div>
-            <div class="flex items-start">
+            <div class="flex items-start scroll-item">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-6">
                 <span class="material-symbols-outlined text-primary text-3xl">insights</span>
               </div>
@@ -406,7 +330,7 @@ details[open] > summary .material-symbols-outlined {
                 <p class="mt-1 text-slate-600 dark:text-slate-400">Our systems monitor your IT infrastructure 24/7, identifying and resolving potential problems before they can impact your operations and cause downtime.</p>
               </div>
             </div>
-            <div class="flex items-start">
+            <div class="flex items-start scroll-item">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-6">
                 <span class="material-symbols-outlined text-primary text-3xl">strategy</span>
               </div>
@@ -417,7 +341,7 @@ details[open] > summary .material-symbols-outlined {
             </div>
           </div>
         </div>
-        <div class="bg-white dark:bg-slate-800 p-8 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xl">
+        <div class="bg-white dark:bg-slate-800 p-8 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-item-right">
           <h3 class="text-xl font-bold font-display text-primary">Not Sure Which Model Fits?</h3>
           <p class="mt-3 text-slate-600 dark:text-slate-400">Let's talk. Every business is unique. We'll help you assess your current needs, future goals, and budget to recommend the support model that delivers the most value for you.</p>
           <ul class="mt-4 space-y-3">

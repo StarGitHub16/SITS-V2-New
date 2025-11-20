@@ -32,6 +32,7 @@
       },
     };
   </script>
+
 <style type="text/tailwindcss">
     .circuit-board-light {
       background-color: #c9c9c9;
@@ -64,6 +65,34 @@
     .service-carousel::-webkit-scrollbar-thumb:hover {
       background: #bf2026;
     }
+
+    /*Scroll Functionality CSS*/
+
+    /*For Scroll Transition from Left*/
+    .scroll-item {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: all .8s ease-in-out;
+    }
+    
+    .scroll-item.visible {
+        opacity: 1;
+        transform:translateX(0);
+    }
+
+    /*For Scroll Transition from Right*/
+    .scroll-item-right {
+        opacity: 0;
+        transform: translateX(60px);
+        transition: all .8s ease-in-out;
+    }
+
+    .scroll-item-right.visible {
+        opacity: 1; 
+        transform: translateX(0px);
+        transition: all .8s ease-in-out;
+    }
+
   </style>
 
 <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -91,7 +120,7 @@
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="./Services/managed-cybersecurity.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Managed Cybersecurity</a>
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Penetration Testing</a>
@@ -119,7 +148,7 @@
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="#about-us" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Business Phones</a>
         <a href="#team" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Networking Equipment</a>
@@ -143,7 +172,7 @@
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="#managed-cybersecurity" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 font-display">Law Firms</a>
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent dark:hover:bg-slate-700 font-display">Accounting</a>
@@ -172,7 +201,7 @@
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="#about-us" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Why Summit?</a>
         <a href="#careers" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Careers</a>
@@ -191,7 +220,7 @@
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="#latest-posts" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Blog Center</a>
       </div>
@@ -499,13 +528,13 @@
 <section class="py-20 bg-background-light" id="about">
   <div class="container mx-auto px-6">
     <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
+        <div class="scroll-item">
           <span class="text-accent font-semibold font-display tracking-wider">About Us</span>
           <h2 class="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white mt-2">Your Peak Partner in IT &amp; Cybersecurity</h2>
           <p class="mt-4 text-slate-600 dark:text-slate-400">Founded on the principle of providing unparalleled service, Summit IT Solutions has grown into a leading provider of managed IT and cybersecurity services. We believe that technology should be an asset, not a burden. Our mission is to empower businesses by managing their technology infrastructure, allowing them to innovate, grow, and achieve their goals securely.</p>
           <p class="mt-4 text-slate-600 dark:text-slate-400">Our team of certified experts brings decades of combined experience, offering strategic guidance and hands-on support. We are committed to building long-term partnerships with our clients, acting as a true extension of their team.</p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-center scroll-item-right">
             <div class="bg-slate-100 dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
             <div class="text-5xl font-bold font-display text-accent">10+</div>
             <p class="mt-2 text-slate-600 dark:text-slate-400">Years of Industry Experience</p>
@@ -530,7 +559,7 @@
 <section class="py-20 bg-[#2E4A6F]" id="choose-us">
   <div class="container mx-auto px-6" 
        x-data="{
-         activeAccordion: 1,
+         activeAccordion: 0,
          toggleAccordion(id) {
            this.activeAccordion = this.activeAccordion === id ? null : id
          }
@@ -542,13 +571,13 @@
     </div>
     
     <div class="flex flex-col md:flex-row">
-      <div class="w-full py-4 md:w-1/2 px-4 md:py-0">
+      <div class="w-full py-4 md:w-1/2 px-4 md:py-0 scroll-item">
         <img class="rounded-xl" src="./asset/AdobeStock_105046282.jpeg">
       </div>
       
       <div class="w-full md:w-1/2 px-4 space-y-4">
         
-        <div class="bg-white/20 rounded-xl">
+        <div class="bg-white/20 rounded-xl scroll-item-right">
           <button @click="toggleAccordion(1)" class="w-full flex justify-between items-center p-6 text-left">
             <h3 class="text-xl font-bold text-white">Expert, Certified Team</h3>
             <span :class="activeAccordion === 1 ? 'rotate-180' : ''" class="material-symbols-outlined text-white transition-transform">expand_more</span>
@@ -558,7 +587,7 @@
           </div>
         </div>
         
-        <div class="bg-white/20 rounded-xl">
+        <div class="bg-white/20 rounded-xl scroll-item-right">
           <button @click="toggleAccordion(2)" class="w-full flex justify-between items-center p-6 text-left">
             <h3 class="text-xl font-bold text-white">Proactive, Not Reactive</h3>
             <span :class="activeAccordion === 2 ? 'rotate-180' : ''" class="material-symbols-outlined text-white transition-transform">expand_more</span>
@@ -568,7 +597,7 @@
           </div>
         </div>
         
-        <div class="bg-white/20 rounded-xl">
+        <div class="bg-white/20 rounded-xl scroll-item-right">
           <button @click="toggleAccordion(3)" class="w-full flex justify-between items-center p-6 text-left">
             <h3 class="text-xl font-bold text-white">Customized Strategic Solutions</h3>
             <span :class="activeAccordion === 3 ? 'rotate-180' : ''" class="material-symbols-outlined text-white transition-transform">expand_more</span>
@@ -578,7 +607,7 @@
           </div>
         </div>
 
-         <div class="bg-white/20 rounded-xl">
+         <div class="bg-white/20 rounded-xl scroll-item-right">
           <button @click="toggleAccordion(4)" class="w-full flex justify-between items-center p-6 text-left">
             <h3 class="text-xl font-bold text-white">Customized Strategic Solutions</h3>
             <span :class="activeAccordion === 4 ? 'rotate-180' : ''" class="material-symbols-outlined text-white transition-transform">expand_more</span>
@@ -600,9 +629,9 @@
       <h2 class="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white">What Our Clients Say</h2>
       <p class="mt-4 max-w-2xl mx-auto text-slate-600 dark:text-slate-400">Real stories from businesses we've helped reach their peak performance.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white dark:bg-slate-800 p-8 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-      <p class="text-slate-600 dark:text-slate-400">"Partnering with Summit IT Solutions was a game-changer for our security posture. Their proactive approach and expert team give us the confidence to focus on our business, knowing our data is protected around the clock."</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+      <div class="bg-white dark:bg-slate-800 p-8 rounded-xl border border-slate-200 shadow-sm">
+      <p class="text-slate-600">"Partnering with Summit IT Solutions was a game-changer for our security posture. Their proactive approach and expert team give us the confidence to focus on our business, knowing our data is protected around the clock."</p>
         <div class="mt-6 flex items-center">
         <div class="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-700 mr-4"></div>
         <div>
@@ -683,8 +712,8 @@
                 Let's discuss how Summit IT Solutions can elevate your business's IT infrastructure and security posture. Schedule your free, no-obligation consultation today.
             </p>
             <div class="mt-8">
-                <a class="bg-white text-accent font-bold py-3 px-8 rounded-lg hover:bg-slate-100 transition-colors" href="#">
-                    Get in Touch
+                <a class="bg-white text-accent font-bold py-3 px-8 rounded-lg hover:bg-slate-100 transition-colors font-display" href="#">
+                    Schedule Consultation
                 </a>
             </div>
         </div>
@@ -799,6 +828,8 @@
     
   </div>
 </footer>
-
 </body>
+
+<!--JavaScipt-->
+<script src="../js/script.js"></script>
 </html>

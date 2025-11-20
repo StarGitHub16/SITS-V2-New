@@ -1,0 +1,90 @@
+/*Sub-Pages CSS*/
+
+/*Note -- Kept the CSS in the html on the main page to ensure faster load times*/
+
+
+
+
+
+[x-cloak] {
+    display: none !important;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+
+.hero-bg-light {
+    background-color: #f8fafc;
+    background-image: radial-gradient(circle at 1% 1%, rgba(191, 32, 38, 0.05), transparent 30%), radial-gradient(circle at 99% 99%, rgba(46, 74, 111, 0.05), transparent 30%);
+}
+.dark .hero-bg-light {
+    background-color: #18181B;
+    background-image: radial-gradient(circle at 100% 0%, rgba(191, 32, 38, 0.3), transparent 40%), radial-gradient(circle at 0% 100%, rgba(46, 74, 111, 0.6), transparent 40%);
+}
+details > summary {
+    list-style: none
+    }
+details > summary::-webkit-details-marker {
+    display: none
+    }
+details > summary .material-symbols-outlined {
+    transition: transform 0.2s ease-in-out
+    }
+details[open] > summary .material-symbols-outlined {
+    transform: rotate(180deg)
+    }
+.check-list-item {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA5_iFUXcR6prvBEECZd-c-FH4F6Ssm5dPdG5VC5mdfN74bhfVE3xtbo3PiActaEYnuvdEe3t1NzdlT3X2hGJAC4aXCMCvZByFKzwj7PznFoyFCqpALT4oxVzJ8DNhcNYLbcYEuKg9k9Rou2LCMePyY_XEcBfeqM4ejzirTMUccNjYpmjjdQxA93AgkblQvGBLsg0WJlvcymIP3zMTr6VveUmjYdmKedl522NzuhT7iu3l1Hs5ekVbKk3CKgntlmjUr9LQgEB5Jy5CT);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1.25rem;
+    padding-left: 2rem
+    }
+.step-line {
+    content: '';
+    position: absolute;
+    left: 1.25rem;
+    top: 3.5rem;
+    bottom: -1rem;
+    width: 2px;
+    background-color: #e2e8f0;
+}
+.dark .step-line {
+    background-color: #475569;
+}
+
+
+.step:last-child .step-line {
+    display: none;
+}
+
+
+
+
+/*Scroll Functionality CSS*/
+
+    /*For Scroll Transition from Left*/
+    .scroll-item {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: all .8s ease-in-out;
+    }
+    
+    .scroll-item.visible {
+        opacity: 1;
+        transform:translateX(0);
+    }
+
+    /*For Scroll Transition from Right*/
+    .scroll-item-right {
+        opacity: 0;
+        transform: translateX(60px);
+        transition: all .8s ease-in-out;
+    }
+
+    .scroll-item-right.visible {
+        opacity: 1; 
+        transform: translateX(0px);
+        transition: all .8s ease-in-out;
+    }

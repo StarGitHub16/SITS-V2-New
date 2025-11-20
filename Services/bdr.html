@@ -6,6 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Orbitron:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link rel="stylesheet" href="../css/services.css">
 <script>
     tailwind.config = {
       darkMode: "class",
@@ -32,84 +33,6 @@
       },
     };
   </script>
-<style type="text/tailwindcss">.material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
-    }
-.hero-bg-light {
-    background-color: #f8fafc;
-    background-image: radial-gradient(circle at 1% 1%, rgba(191, 32, 38, 0.05), transparent 30%), radial-gradient(circle at 99% 99%, rgba(46, 74, 111, 0.05), transparent 30%);
-}
-.dark .hero-bg-light {
-    background-color: #18181B;
-    background-image: radial-gradient(circle at 100% 0%, rgba(191, 32, 38, 0.3), transparent 40%), radial-gradient(circle at 0% 100%, rgba(46, 74, 111, 0.6), transparent 40%);
-}
-details > summary {
-    list-style: none
-    }
-details > summary::-webkit-details-marker {
-    display: none
-    }
-details > summary .material-symbols-outlined {
-    transition: transform 0.2s ease-in-out
-    }
-details[open] > summary .material-symbols-outlined {
-    transform: rotate(180deg)
-    }
-.check-list-item {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA5_iFUXcR6prvBEECZd-c-FH4F6Ssm5dPdG5VC5mdfN74bhfVE3xtbo3PiActaEYnuvdEe3t1NzdlT3X2hGJAC4aXCMCvZByFKzwj7PznFoyFCqpALT4oxVzJ8DNhcNYLbcYEuKg9k9Rou2LCMePyY_XEcBfeqM4ejzirTMUccNjYpmjjdQxA93AgkblQvGBLsg0WJlvcymIP3zMTr6VveUmjYdmKedl522NzuhT7iu3l1Hs5ekVbKk3CKgntlmjUr9LQgEB5Jy5CT);
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 1.25rem;
-    padding-left: 2rem
-    }
-.step-line {
-    content: '';
-    position: absolute;
-    left: 1.25rem;
-    top: 3.5rem;
-    bottom: -1rem;
-    width: 2px;
-    background-color: #e2e8f0;
-}
-
-
-
-.dark .step-line {
-    background-color: #475569;
-}
-.step:last-child .step-line {
-    display: none;
-}
-
-/*Scroll Functionality CSS*/
-
-    /*For Scroll Transition from Left*/
-    .scroll-item {
-        opacity: 0;
-        transform: translateX(-30px);
-        transition: all .8s ease-in-out;
-    }
-    
-    .scroll-item.visible {
-        opacity: 1;
-        transform:translateX(0);
-    }
-
-    /*For Scroll Transition from Right*/
-    .scroll-item-right {
-        opacity: 0;
-        transform: translateX(60px);
-        transition: all .8s ease-in-out;
-    }
-
-    .scroll-item-right.visible {
-        opacity: 1; 
-        transform: translateX(0px);
-        transition: all .8s ease-in-out;
-    }
-
-</style>
-
 
 <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head> 
@@ -138,7 +61,7 @@ details[open] > summary .material-symbols-outlined {
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="./managed-cybersecurity.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Managed Cybersecurity</a>
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Penetration Testing</a>
@@ -166,7 +89,7 @@ details[open] > summary .material-symbols-outlined {
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="#about-us" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Business Phones</a>
         <a href="#team" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Networking Equipment</a>
@@ -190,7 +113,7 @@ details[open] > summary .material-symbols-outlined {
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="#managed-cybersecurity" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 font-display">Law Firms</a>
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent dark:hover:bg-slate-700 font-display">Accounting</a>
@@ -219,7 +142,7 @@ details[open] > summary .material-symbols-outlined {
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="#about-us" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Why Summit?</a>
         <a href="#careers" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Careers</a>
@@ -238,7 +161,7 @@ details[open] > summary .material-symbols-outlined {
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+         x-cloak class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
       <div class="py-1 text-center">
         <a href="#latest-posts" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Blog Center</a>
       </div>
