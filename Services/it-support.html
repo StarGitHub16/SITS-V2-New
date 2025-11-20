@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IT Support - Summit IT Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Orbitron:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#BF2026",
+            accent: {
+              DEFAULT: "#bf2026",
+            },
+            "background-light": "#FEFEFE",
+            "background-dark": "#18181B",
+            "surface-light": "#EEEEEE",
+            "surface-dark": "#27272A",
+          },
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            display: ["Orbitron", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+          },
+        },
+      },
+    };
+  </script>
+<style type="text/tailwindcss">.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.hero-bg-light {
+    background-color: #f8fafc;
+    background-image: radial-gradient(circle at 1% 1%, rgba(191, 32, 38, 0.05), transparent 30%), radial-gradient(circle at 99% 99%, rgba(46, 74, 111, 0.05), transparent 30%);
+}
+.dark .hero-bg-light {
+    background-color: #18181B;
+    background-image: radial-gradient(circle at 100% 0%, rgba(191, 32, 38, 0.3), transparent 40%), radial-gradient(circle at 0% 100%, rgba(46, 74, 111, 0.6), transparent 40%);
+}
+details > summary {
+    list-style: none
+    }
+details > summary::-webkit-details-marker {
+    display: none
+    }
+details > summary .material-symbols-outlined {
+    transition: transform 0.2s ease-in-out
+    }
+details[open] > summary .material-symbols-outlined {
+    transform: rotate(180deg)
+    }
+.check-list-item {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA5_iFUXcR6prvBEECZd-c-FH4F6Ssm5dPdG5VC5mdfN74bhfVE3xtbo3PiActaEYnuvdEe3t1NzdlT3X2hGJAC4aXCMCvZByFKzwj7PznFoyFCqpALT4oxVzJ8DNhcNYLbcYEuKg9k9Rou2LCMePyY_XEcBfeqM4ejzirTMUccNjYpmjjdQxA93AgkblQvGBLsg0WJlvcymIP3zMTr6VveUmjYdmKedl522NzuhT7iu3l1Hs5ekVbKk3CKgntlmjUr9LQgEB5Jy5CT);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1.25rem;
+    padding-left: 2rem
+    }
+.step-line {
+    content: '';
+    position: absolute;
+    left: 1.25rem;
+    top: 3.5rem;
+    bottom: -1rem;
+    width: 2px;
+    background-color: #e2e8f0;
+}
+.dark .step-line {
+    background-color: #475569;
+}
+
+
+.step:last-child .step-line {
+    display: none;
+}
+
+/*Scroll Functionality CSS*/
+
+    /*For Scroll Transition from Left*/
+    .scroll-item {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: all .8s ease-in-out;
+    }
+    
+    .scroll-item.visible {
+        opacity: 1;
+        transform:translateX(0);
+    }
+
+    /*For Scroll Transition from Right*/
+    .scroll-item-right {
+        opacity: 0;
+        transform: translateX(60px);
+        transition: all .8s ease-in-out;
+    }
+
+    .scroll-item-right.visible {
+        opacity: 1; 
+        transform: translateX(0px);
+        transition: all .8s ease-in-out;
+    }
+
+</style>
+
+
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="font-sans hero-bg-light dark:bg-background-dark text-slate-800 dark:text-slate-200 antialiased">
+  <div class="relative min-h-screen" x-data="{ isMenuOpen: false }">
+   
+    <header class="sticky top-0 z-50 bg-background-light/60 dark:bg-background-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+      <div class="container mx-auto px-4 py-4 md:py-8 flex justify-between items-center">
+
+        <a class="flex items-center space-x-3" href="../index.html">
+          <img alt="Summit IT Solutions Logo" class="w-200 h-28" src="../asset/SITS logo.png"/>
+        </a>
+  
+
+
+
+<nav class="hidden xl:flex items-center space-x-8">
+  
+  <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+    <a class="text-md font-medium hover:text-accent dark:hover:text-accent transition-colors cursor-pointer font-display text-[1.2rem]">Our Services</a>
+    
+    <div x-show="open" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 transform scale-95"
+         x-transition:enter-end="opacity-100 transform scale-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 transform scale-100"
+         x-transition:leave-end="opacity-0 transform scale-95"
+         class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+      <div class="py-1 text-center">
+        <a href="./managed-cybersecurity.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Managed Cybersecurity</a>
+        <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Penetration Testing</a>
+        <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">IT Support</a>
+        <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Co-Managed IT</a>
+        <a href="./bdr.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Backup & Recovery</a>
+
+        <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Business Communications (VoIP)</a>
+        <a href="#cloud-services" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Conference Room as a Service</a>
+        <a href="#voip" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Cloud Services</a>
+        
+        <a href="#voip" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Compliance</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false"> 
+    <a class="text-md font-medium hover:text-accent dark:hover:text-accent transition-colors cursor-pointer font-display text-[1.2rem]">Hardware</a>
+    
+    <div x-show="open" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 transform scale-95"
+         x-transition:enter-end="opacity-100 transform scale-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 transform scale-100"
+         x-transition:leave-end="opacity-0 transform scale-95"
+         class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+      <div class="py-1 text-center">
+        <a href="#about-us" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Business Phones</a>
+        <a href="#team" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Networking Equipment</a>
+        <a href="#careers" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Cameras</a>
+        <a href="#careers" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Door Access Control</a>
+        <a href="#careers" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Conference Rooms</a>
+        <a href="#careers" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">New Office Setup</a>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+    <a class="text-md font-medium hover:text-accent dark:hover:text-accent transition-colors cursor-pointer font-display md:text-[1.2rem]">Industries</a>
+    
+    <div x-show="open" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 transform scale-95"
+         x-transition:enter-end="opacity-100 transform scale-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 transform scale-100"
+         x-transition:leave-end="opacity-0 transform scale-95"
+         class="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+      <div class="py-1 text-center">
+        <a href="#managed-cybersecurity" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 font-display">Law Firms</a>
+        <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent dark:hover:bg-slate-700 font-display">Accounting</a>
+        <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent dark:hover:bg-slate-700 font-display">Financial Services</a>
+        <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Healthcare & Dental</a>
+        <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent dark:hover:bg-slate-700 font-display">Veterinary Clinics</a>
+
+        <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Service Business</a>
+        <a href="#cloud-services" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Retail</a>
+        <a href="#voip" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Manufacturing</a>
+        
+        <a href="#voip" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent   dark:hover:bg-slate-700 font-display">Golf Clubs & Hospitality</a>
+
+        <a href="#voip" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Real Estate</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+    <a class="text-md font-medium hover:text-accent dark:hover:text-accent transition-colors cursor-pointer font-display text-[1.2rem]">About Us</a>
+    
+    <div x-show="open" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 transform scale-95"
+         x-transition:enter-end="opacity-100 transform scale-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 transform scale-100"
+         x-transition:leave-end="opacity-0 transform scale-95"
+         class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+      <div class="py-1 text-center">
+        <a href="#about-us" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Why Summit?</a>
+        <a href="#careers" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Careers</a>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+    <a class="text-md font-medium hover:text-accent dark:hover:text-accent transition-colors cursor-pointer font-display text-[1.2rem]">Resources</a>
+    
+    <div x-show="open" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 transform scale-95"
+         x-transition:enter-end="opacity-100 transform scale-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 transform scale-100"
+         x-transition:leave-end="opacity-0 transform scale-95"
+         class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
+      <div class="py-1 text-center">
+        <a href="#latest-posts" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Blog Center</a>
+      </div>
+    </div>
+  </div>
+  
+</nav>
+        <button class="hidden xl:block bg-accent text-white text-md font-medium py-2 px-4 rounded-lg hover:opacity-90 transition-opacity font-display">
+            Get a Free Consultation
+        </button>
+        <button @click="isMenuOpen = true" class="xl:hidden text-slate-800 dark:text-slate-200">
+          <span class="material-symbols-outlined w-100 h-100">menu</span>
+        </button>
+  </div>
+</header>
+<main>
+
+  <section class="relative hero-bg-light text-slate-800 dark:text-white overflow-hidden">
+    <div class="container mx-auto px-6 pt-24 pb-20 lg:pt-32 lg:pb-28">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 z-10">
+          <p class="text-primary font-semibold font-display tracking-wider">Complete Support</p>
+            <h1 class="mt-2 text-4xl md:text-6xl font-bold font-display leading-tight text-slate-900 dark:text-white">
+                        Beyond Break-Fix: Your Proactive IT Partner
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg text-slate-600 dark:text-slate-300">
+                Stop waiting for things to break. Our Complete Support service offers a better way—from essential reactive fixes to a fully proactive IT partnership that prevents problems and drives your business forward.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+              <a class="inline-block bg-primary text-white font-medium py-3 px-8 rounded-lg hover:opacity-90 transition-opacity text-center font-display" href="#contact">
+                            Request a Quote
+              </a>
+              <a class="inline-block bg-accent/10 text-accent dark:bg-white/10 dark:text-white font-medium py-3 px-8 rounded-lg hover:bg-accent/20 dark:hover:bg-white/20 transition-colors text-center font-display" href="#support-models">
+                            Compare Models
+              </a>
+            </div>
+        </div>
+        <div class="lg:col-span-6 lg:col-start-8 relative flex items-center justify-center">
+          <div class="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] flex items-center justify-center">
+            <div class="absolute inset-0 bg-primary/10 dark:bg-primary/20 rounded-full animate-pulse"></div>
+            <div class="absolute inset-4 bg-primary/20 dark:bg-primary/30 rounded-full animate-pulse [animation-delay:0.2s]"></div>
+            <span class="material-symbols-outlined text-primary text-[150px] md:text-[200px] relative z-10" style="font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 0, 'opsz' 48">shield_with_heart</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-24" id="support-models">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white">Is Your IT Support Holding You Back?</h2>
+          <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">
+                    Many businesses are stuck in a reactive loop, or worse, navigating frustrating escalation queues. We believe in a different approach. It's time to choose a support model that fuels your growth, not your frustrations.
+          </p>
+      </div>
+      <div class="mt-16 grid lg:grid-cols-3 gap-8">
+        <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xl font-bold font-display text-slate-900 dark:text-white">Breakfix Support</h3>
+            <span class="material-symbols-outlined text-primary text-4xl">build</span>
+          </div>
+          <p class="mt-4 text-slate-600 dark:text-slate-400">The traditional "call us when it's broken" model. Ideal for organizations with minimal IT needs that prefer a pay-as-you-go approach for reactive problem-solving.</p>
+          <ul class="mt-6 space-y-3 text-sm text-left">
+            <li class="flex items-start">
+              <span class="material-symbols-outlined text-accent text-lg mr-2 mt-0.5">add_circle</span>
+              <span>Pay only for the service you use.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="material-symbols-outlined text-accent text-lg mr-2 mt-0.5">add_circle</span>
+              <span>No long-term commitment.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="material-symbols-outlined text-slate-500 text-lg mr-2 mt-0.5">remove_circle</span>
+              <span>Reactive, not proactive.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="material-symbols-outlined text-slate-500 text-lg mr-2 mt-0.5">remove_circle</span>
+              <span>Unpredictable costs.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-primary text-white p-8 rounded-xl border border-primary dark:border-primary shadow-2xl relative overflow-hidden scale-105">
+          <div class="absolute -top-4 -right-4 text-white/10">
+            <span class="material-symbols-outlined !text-[120px]">workspace_premium</span>
+          </div>
+          <div class="relative z-10">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-bold font-display">The Summit Way</h3>
+              <span class="material-symbols-outlined text-white text-4xl">rocket_launch</span>
+            </div>
+            <p class="mt-4 text-white/90">Our premier proactive model. We integrate with your team, manage your environment to prevent issues, and provide strategic guidance to align IT with your business goals.</p>
+            <ul class="mt-6 space-y-3 text-sm text-left">
+              <li class="flex items-start">
+                <span class="material-symbols-outlined text-white text-lg mr-2 mt-0.5">add_circle</span>
+                <span>Proactive monitoring &amp; maintenance.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="material-symbols-outlined text-white text-lg mr-2 mt-0.5">add_circle</span>
+                <span>Strategic IT planning included.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="material-symbols-outlined text-white text-lg mr-2 mt-0.5">add_circle</span>
+                <span>Dedicated support pod.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="material-symbols-outlined text-white text-lg mr-2 mt-0.5">add_circle</span>
+                <span>Fastest resolution times.</span>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl border border-slate-200 dark:border-slate-700 opacity-80">
+        <div class="flex items-center justify-between">
+          <h3 class="text-xl font-bold font-display text-slate-900 dark:text-white">The Outdated Model</h3>
+          <span class="material-symbols-outlined text-slate-500 text-4xl">block</span>
+        </div>
+        <p class="mt-4 text-slate-600 dark:text-slate-400"><strong class="text-slate-700 dark:text-slate-300">This is what we're against.</strong> Traditional Escalation is a slow, frustrating process where your issue gets passed around, wasting your valuable time.</p>
+        <ul class="mt-6 space-y-3 text-sm text-left">
+          <li class="flex items-start">
+            <span class="material-symbols-outlined text-primary text-lg mr-2 mt-0.5">remove_circle</span>
+            <span>Slow resolution for complex issues.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="material-symbols-outlined text-primary text-lg mr-2 mt-0.5">remove_circle</span>
+            <span>Impersonal, tiered service queues.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="material-symbols-outlined text-primary text-lg mr-2 mt-0.5">remove_circle</span>
+            <span>No one truly owns your problem.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="material-symbols-outlined text-primary text-lg mr-2 mt-0.5">remove_circle</span>
+            <span>Focuses on process, not results.</span>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-24 bg-surface-light dark:bg-surface-dark">
+    <div class="container mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white">Why "The Summit Way" is the Better Way</h2>
+          <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">
+            We've moved beyond simple problem-solving. The Summit Way is a partnership model where our success is directly tied to yours. We don't just fix tech; we optimize it to drive your business forward.
+          </p>
+          <div class="mt-8 space-y-6">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-6">
+                <span class="material-symbols-outlined text-primary text-3xl">groups</span>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold font-display text-slate-800 dark:text-white">Dedicated Pod Structure</h4>
+                <p class="mt-1 text-slate-600 dark:text-slate-400">You get a dedicated team—your "pod"—that knows your business, your environment, and your people. No more re-explaining issues to a new technician every time.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-6">
+                <span class="material-symbols-outlined text-primary text-3xl">insights</span>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold font-display text-slate-800 dark:text-white">Proactive Health Monitoring</h4>
+                <p class="mt-1 text-slate-600 dark:text-slate-400">Our systems monitor your IT infrastructure 24/7, identifying and resolving potential problems before they can impact your operations and cause downtime.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-6">
+                <span class="material-symbols-outlined text-primary text-3xl">strategy</span>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold font-display text-slate-800 dark:text-white">Strategic Business Reviews</h4>
+                <p class="mt-1 text-slate-600 dark:text-slate-400">We conduct regular reviews to discuss performance, plan for the future, and ensure your technology strategy is perfectly aligned with your business objectives.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 p-8 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xl">
+          <h3 class="text-xl font-bold font-display text-primary">Not Sure Which Model Fits?</h3>
+          <p class="mt-3 text-slate-600 dark:text-slate-400">Let's talk. Every business is unique. We'll help you assess your current needs, future goals, and budget to recommend the support model that delivers the most value for you.</p>
+          <ul class="mt-4 space-y-3">
+            <li class="flex items-start">
+              <span class="material-symbols-outlined text-accent text-xl mr-2 mt-0.5 flex-shrink-0">check_circle</span>
+              <span>Analyze current IT challenges and pain points.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="material-symbols-outlined text-accent text-xl mr-2 mt-0.5 flex-shrink-0">check_circle</span>
+              <span>Understand your team's technical expertise.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="material-symbols-outlined text-accent text-xl mr-2 mt-0.5 flex-shrink-0">check_circle</span>
+              <span>Align IT investment with business growth plans.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="material-symbols-outlined text-accent text-xl mr-2 mt-0.5 flex-shrink-0">check_circle</span>
+              <span>Provide a clear, no-obligation recommendation.</span>
+            </li>
+          </ul>
+          <a class="mt-6 inline-block w-full text-center bg-primary text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-opacity font-display" href="#contact">Get a Personalized Assessment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-black" id="contact">
+    <div class="container mx-auto px-6 flex flex-col items-center justify-center md:flex-row md:space-x-12"> 
+      <div class="w-full md:w-1/2 px-4">
+            <img class="rounded-xl object-cover w-full max-h-96" src="../asset/AdobeStock_105046282.jpeg" alt="Securing technology illustration">
+      </div>
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold font-display text-white">Ready to Experience Proactive, Strategic IT Support?</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-white/90">
+           Stop putting out fires and start building for the future. Contact us today for a free consultation and discover how the right support model can transform your business.
+        </p>
+        <div class="mt-8">
+          <a class="bg-accent text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition-opacity text-lg font-display" href="#">
+           Free Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-accent dark:bg-slate-900 border-t border-black dark:border-slate-800 text-white">
+  <div class="container mx-auto px-6 py-12 md:py-16 md:px-16">
+    <div class="flex justify-center grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 md:flex justify-center">
+      
+      <div class="col-span-2 lg:col-span-1">
+        <a class="flex items-center justify-center bg-white rounded-xl" href="#">
+          <img alt="Summit IT Solutions Logo" class="w-40 h-20" src="../asset/SITS logo.png"/>
+        </a>
+        <p class="mt-4 text-sm text-white dark:text-slate-400">Your Peak Partner in IT &amp; Cybersecurity</p>
+        
+        <h6 class="font-bold font-display text-white dark:text-white mt-4 text-[1.4rem]">Company</h6>
+        <ul class="space-y-1 text-md">
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">About Us</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Careers</a></li>
+        </ul>
+        <br>
+        
+        <h6 class="font-bold font-display text-white dark:text-white mt-4 text-[1.4rem]">Resources</h6>
+        <ul>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Blog Center</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="font-bold font-display text-white dark:text-white mb-4 text-[1.4rem]">Our Services</h6>
+        <ul class="space-y-3 text-md">
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Managed Cybersecurity</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Penetration Testing</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">IT Support</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">IT Management</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Co-Managed IT</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Backup &amp; Recovery</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Business Communications (VoIP)</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Conference Room as a Service</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Cloud Services</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Compliance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="font-bold font-display text-white dark:text-white mb-4 text-[1.4rem]">Industries</h6>
+        <ul class="space-y-3 text-md">
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Law Firms</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Accounting</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Financial Services</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Healthcare & Dental</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Veterinary Clinics</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Service Business</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Retail</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Manufacturing</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Golf Clubs & Hospitality</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Real Estate</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="font-bold font-display text-white dark:text-white mb-4 text-[1.4rem]">Hardware</h6>
+        <ul class="space-y-3 text-md">
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Business Phones</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Networking Equipment</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Cameras</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Door Access Control</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">Conference Rooms</a></li>
+          <li><a class="text-white dark:text-slate-400 hover:text-gray-300 dark:hover:text-gray-300" href="#">New Office Setup</a></li>
+        </ul>
+      </div>
+
+    </div>
+    
+    <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-white dark:text-slate-400 font-display">
+      <p>© 2023 Summit IT Solutions, LLC. All Rights Reserved.</p>
+    </div>
+    
+  </div>
+</footer>
+</div>
+</body>
+
+<!--JavaScipt-->
+<script src="../js/script.js"></script>
+
+</html>

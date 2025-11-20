@@ -71,12 +71,44 @@ details[open] > summary .material-symbols-outlined {
     width: 2px;
     background-color: #e2e8f0;
 }
+
+
+
 .dark .step-line {
     background-color: #475569;
 }
 .step:last-child .step-line {
     display: none;
-}</style>
+}
+
+/*Scroll Functionality CSS*/
+
+    /*For Scroll Transition from Left*/
+    .scroll-item {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: all .8s ease-in-out;
+    }
+    
+    .scroll-item.visible {
+        opacity: 1;
+        transform:translateX(0);
+    }
+
+    /*For Scroll Transition from Right*/
+    .scroll-item-right {
+        opacity: 0;
+        transform: translateX(60px);
+        transition: all .8s ease-in-out;
+    }
+
+    .scroll-item-right.visible {
+        opacity: 1; 
+        transform: translateX(0px);
+        transition: all .8s ease-in-out;
+    }
+
+</style>
 
 
 <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -110,7 +142,7 @@ details[open] > summary .material-symbols-outlined {
       <div class="py-1 text-center">
         <a href="./managed-cybersecurity.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Managed Cybersecurity</a>
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Penetration Testing</a>
-        <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">IT Support</a>
+        <a href="./it-support.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">IT Support</a>
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Co-Managed IT</a>
         <a href="#it-support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-accent  dark:hover:bg-slate-700 font-display">Backup & Recovery</a>
 
