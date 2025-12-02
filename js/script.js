@@ -30,8 +30,7 @@ window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);
 
 
-//Tab Functionality on the MPS Section
-
+//Horizontal Functionality on the MPS Section
 document.addEventListener('DOMContentLoaded', () => {
   const solutionButtons = document.querySelectorAll('.solution-button');
   const contentContent = document.querySelector('.solution-content');
@@ -48,8 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       currentContent.classList.remove('opacity-100', 'translate-x-0');
       currentContent.classList.add('opacity-0', 'translate-x-full');
-
-
 
       currentContent.addEventListener('transitionend', function handler() {
         currentContent.classList.add('hidden', 'translate-x-0');
